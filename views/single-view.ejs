@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container mb-5">
+    <% if (locals.content) { %>
+        <div class="row">
+            <div class="col-12 text-center mb-3">
+                <h1><%= content.title_english %> | <%= content.title_japanese %></h1>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-xl-3 col-sm-12 center mx-auto">
+                <img src="<%= content.images.jpg.large_image_url %>" alt="Image of requested anime">
+            </div>
+    
+            <div class="col-xl-3 col-sm-12 anime-details my-3">
+                <h3>Episodes: <%= content.episodes %></h3>
+                <h4>Score: <%= content.score %></h4>
+                <h5>Rank: <%= content.rank %></h5>
+                <h6>Popularity: <%= content.popularity %></h6>
+            </div>
+    
+            <div class="col-xl-5 col-sm-12 mb-5">
+                <h4>Summary:</h4>
+                <p><%= content.synopsis %></p>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<%- include('partials/footer.ejs') %>

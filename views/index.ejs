@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="column">
+            <div class="search-form">
+                <form action="/anime" method="post">
+                    <div>
+                        <label for="q">Search Anime:</label>
+                        <input type="search" name="q" id="q">
+                        <button class="btn btn-dark" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <% if (locals.content) { %>
+                <% for( let index = 0; index < content.length; index++ ) { %>
+                    <div class="col col-lg-3 d-flex justify-content-center">
+                        <form action="/anime/id" method="post">
+                            <input type="hidden" name="animeId" id="animeId" value="<%= content[index].mal_id %>">
+                            <input type="image" src="<%= content[index].images.jpg.image_url %>" alt="submit" height="317" width="225">
+                            <div class="anime-name">
+                                <p><%= content[index].title %></p>
+                            </div>
+                        </form>
+                    </div>
+                <% } %>
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,71 @@
+/*
+Color Palette:
+#2E3136 - Body
+#507D7B - Footer/Header Bg Color
+#A5B181
+#E67B0D
+#F05C08 - Card Color
+*/
+
+.navbar-custom{
+    background-color: #507D7B;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #2E3136;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+}
+
+.search-form{
+    background-color: #A5B181;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-weight: bolder;
+}
+
+.footer-custom{
+    font-size: small;
+}
+
+input{
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    margin: 10px;
+}
+
+.anime-name{
+    width: 225px;
+    text-align: center;
+}
+
+.page-container{
+    position: relative;
+    min-height: 100vh;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+}
